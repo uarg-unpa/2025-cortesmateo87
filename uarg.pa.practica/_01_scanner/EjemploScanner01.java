@@ -13,7 +13,7 @@ public class EjemploScanner_01 {
 
         System.out.print("¿Cuál es tu altura? ");
         double altura = scanner.nextDouble();
-        scanner.nextLine(); // Limpia el buffer
+        scanner.nextLine(); //  Limpia el buffer
 
         System.out.print("¿Estás estudiando Programación Orientada a Objetos? (true/false): ");
         boolean estudiando = scanner.nextBoolean();
