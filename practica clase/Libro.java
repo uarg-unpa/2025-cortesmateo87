@@ -2,13 +2,13 @@ public class Libro{
     private String titulo;
     private String autor;
     private int aniopublicacion;
-    private int cantpag;
+    private int paginas;
     //constructores
-    public Libro(String titulo, String autor, int aniopublicacion, int cantpag){
+    public Libro(String titulo, String autor, int aniopublicacion, int paginas){
         this.titulo = titulo;
         this.autor = autor;
         this.aniopublicacion = aniopublicacion;
-        this.cantpag = cantpag;
+        this.paginas = paginas;
     }
     public Libro(String titulo, String autor){
         this.titulo = titulo;
@@ -26,6 +26,18 @@ public class Libro{
     }
     public String getAutor(String autor){
     return this.autor;
+    }
+    public void setAniopublicacion(int aniopublicacion){
+    this.aniopublicacion = aniopublicacion;
+    }
+    public int getAniopublicacion(int aniopublicacion){
+    return this.aniopublicacion;
+    }
+    public void setPaginas(int paginas){
+    this.paginas = paginas;
+    }
+    public int getPaginas(int paginas){
+    return this.paginas;
     }
     //metodos
     public boolean esReciente(){

@@ -30,19 +30,19 @@ public class Persona {
         this.apellido = apellido;
     }
 
-    public String getEdad(){
+    public int getEdad(){
         return this.edad;
     }
 
-    public void setEdad(String edad){
+    public void setEdad(int edad){
         this.edad = edad;
     }
 
-    public String getDni(){
+    public int getDni(){
         return this.dni;
     }
 
-    public void setDni(String dni){
+    public void setDni(int dni){
         this.dni = dni;
     }
 //Otras Operaciones
