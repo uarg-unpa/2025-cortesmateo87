@@ -1,4 +1,4 @@
-package tp2;
+package ejemplo1;
 public class Persona {
     //Atributos
     String nombre;
