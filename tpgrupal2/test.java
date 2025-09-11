@@ -21,7 +21,7 @@ public class test {
 
         //metodos prod1
         System.out.println(prod1.esCaro());
-        System.out.println(prod1.actualizarPrecio(110));
+        prod1.actualizarPrecio(110);
         System.out.println(prod1.calcularDescuento(5.25));
         System.out.println(prod1);
 
@@ -38,7 +38,7 @@ public class test {
         producto prod2 = new producto(descripcion,precio,p2);
 
         System.out.println(prod2.esCaro());
-        System.out.println(prod2.actualizarPrecio(1111));
+        prod2.actualizarPrecio(1111);
         System.out.println(prod2.calcularDescuento(10.5));
         System.out.println(prod2);
 
