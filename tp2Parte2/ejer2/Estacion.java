@@ -25,5 +25,13 @@ public class Estacion {
     }
 
     // METODOS
-    
+    public double cargarCombustible(double cantidad){
+        this.capacidadActual = this.capacidadActual - cantidad;
+        return this.capacidadActual;
+    }
+
+    public double reponerCombustible(double cantidad){
+        this.capacidadActual = this.capacidadActual + cantidad;
+        return this.capacidadActual;
+    }
 }
