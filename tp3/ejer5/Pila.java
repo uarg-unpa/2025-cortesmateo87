@@ -1,12 +1,12 @@
-package tp3.ejer3;
+package tp3.ejer5;
 
-public class PilaChar {
-    private char[] elementos;
+public class Pila {
+    private int[] elementos;
     private int cima;
     private final int MAX = 12;
 
-    public PilaChar(){
-        elementos = new char [MAX];
+    public Pila(){
+        elementos = new int [MAX];
         cima = -1;
     }
 
@@ -26,15 +26,22 @@ public class PilaChar {
         }
     }
 
-    public void meter(char elem){
+    public void meter(int elem){
         cima ++;
         elementos[cima] = elem;
     }
 
-    public char sacar(){
-        char guardar;
+    public int sacar(){
+        int guardar;
         guardar = elementos[cima];
         cima--;
         return guardar;
+    }
+
+    public int elementoCima(){
+        int x;
+        x=this.sacar();
+        this.meter(x);
+        return x;
     }
 }
