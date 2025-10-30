@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class MainPilas {
     public static void main(String[] args){ 
     Scanner scan = new Scanner (System.in);
-    Pila pila = new Pila();
+    Cadena pila = new Cadena();
     int opcion;
     
     do{

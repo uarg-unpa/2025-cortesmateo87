@@ -1,13 +1,11 @@
-package tp3.ejer10;
+package tp3.ejer8;
 
-import tp3.ejer8.Cadena;
-
-public class Pila {
-private char[] elementos;
+public class Cadena {
+    private char[] elementos;
     private int cima;
     private final int MAX = 12;
 
-    public Pila(){
+    public Cadena(){
         elementos = new char [MAX];
         cima = -1;
     }
@@ -54,28 +52,28 @@ private char[] elementos;
         }
         return cop;
     }
-    public boolean coinciden(char apertura, char cierre){
-        return (apertura == '(' && cierre == ')') || (apertura == '{' && cierre == '}') || (apertura == '[' && cierre == ']');
-    }
-    public boolean esCorrecta(String expresion){
-        for(int i = 0;i<expresion.length();i++){
-            char c = expresion.charAt(i);
-            if(c =='(' || c == '{' || c == '['){
-                if(this.estaLlena()){
-                    return false;
-                }
-                this.meter(c);
-            }
-            else if(c == ')' || c == '}' || c == ']'){
-                if(this.estaVacia()){
-                    return false;
-                }
-                char tope = this.sacar();
-                if(!coinciden(tope,c)){
-                    return false;
-                }
+    
+    public boolean esPalindromo(){
+        if(this.estaVacia()){
+            return false;
+        }
+        Cadena cop = this.esCopia();
+        Cadena aux = new Cadena();
+        while(!cop.estaVacia()){
+            char guardar = cop.sacar();
+            aux.meter(guardar);
+        }
+        
+        Cadena aux2 = this.esCopia();
+        boolean comparacion = true;
+        while(!aux2.estaVacia() && !aux.estaVacia()){
+            char elem1 = aux2.sacar();
+            char elem2 = aux.sacar();
+            if(elem1 != elem2){
+                comparacion = false;
+                break;
             }
         }
-    return this.estaVacia();
+        return comparacion;
     }
 }
