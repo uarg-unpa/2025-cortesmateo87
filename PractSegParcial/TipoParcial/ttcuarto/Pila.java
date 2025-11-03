@@ -1,11 +1,11 @@
-package tp3.ejer8;
+package PractSegParcial.TipoParcial.ttcuarto;
 
-public class Cadena {
+public class Pila {
     private char[] elementos;
     private int cima;
     private final int MAX = 12;
 
-    public Cadena(){
+    public Pila(){
         elementos = new char [MAX];
         cima = -1;
     }
@@ -38,9 +38,16 @@ public class Cadena {
         return guardar;
     }
 
-    public Cadena esCopia(){
-        Cadena aux = new Cadena();
-        Cadena cop = new Cadena();
+    public char elementoCima(){
+        char x;
+        x=this.sacar();
+        this.meter(x);
+        return x;
+    }
+
+    public Pila esCopia(){
+        Pila aux = new Pila();
+        Pila cop = new Pila();
         while(!this.estaVacia()){
             char guardar = this.sacar();
             aux.meter(guardar);
@@ -51,23 +58,22 @@ public class Cadena {
             this.meter(guardar2);
         }
         return cop;
-    }
-    
+    } 
+
     public boolean esPalindromo(){
         if(this.estaVacia()){
             return false;
         }
-        Cadena cop = this.esCopia();
-        Cadena aux = new Cadena();
+        Pila cop2 = this.esCopia();
+        Pila cop = this.esCopia();
+        Pila aux = new Pila();
         while(!cop.estaVacia()){
             char guardar = cop.sacar();
             aux.meter(guardar);
         }
-        
-        Cadena aux2 = this.esCopia();
         boolean comparacion = true;
-        while(!aux2.estaVacia() && !aux.estaVacia()){
-            char elem1 = aux2.sacar();
+        while(!cop2.estaVacia()){
+            char elem1 = cop2.sacar();
             char elem2 = aux.sacar();
             if(elem1 != elem2){
                 comparacion = false;

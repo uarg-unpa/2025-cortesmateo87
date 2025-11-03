@@ -1,7 +1,9 @@
-package tp3.ejer8;
+package PractSegParcial.TipoParcial.ttcuarto;
+
 import java.util.Scanner;
-public class Testpila {
-    public static void main(String[] args){
+
+public class Main {
+    public static void main(String [] args){
         Scanner scan = new Scanner (System.in);
         Pila p1 = new Pila();
         System.out.println("Ingrese una palabra:");
