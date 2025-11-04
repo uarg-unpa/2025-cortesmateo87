@@ -32,13 +32,13 @@ public class ColaCircular {
 			return ++subind;
 	}
 	
-	public void insertar(int elem)
+	public void encolar(int elem)
 	{		
 		ultimo =siguiente(ultimo);
 		elementos[ultimo]=elem;		
 	}
 	
-	public int borrar()
+	public int desencolar()
 	{
 		frente =siguiente(frente);
 		return elementos[frente];
