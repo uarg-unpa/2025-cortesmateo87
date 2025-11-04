@@ -1,11 +1,11 @@
-package COLAS;
+package aaaaaaaaaa.enteros;
 
-public class ColasInt {
-    private final int maxcola=5;
+public class Cola{
+   private final int maxcola=5;
    private int elementos[];
    private int ultimo;
    
-   public ColasInt(){
+   public Cola(){
       elementos=new int[maxcola];
       ultimo = -1;   
    }
@@ -18,18 +18,26 @@ public class ColasInt {
       return (ultimo==maxcola-1);
    }
    
-   public void insertar(int elem) {      
+   public void encolar(int elem) {      
       if (!this.estaLlena()){
          ultimo++;
          elementos[ultimo]=elem;         
       }
    }
    
-   public int borrar() {
+   public int desencolar() {
       int aux=elementos[0];
       for (int i=0; i<ultimo; i++) 
          elementos[i] = elementos[i+1];
       ultimo--;     
       return aux;
+   }
+
+   public int verFrente(){
+    if (this.estaVacia()){
+        System.out.println("Cola Vacia");
+        return -1;
+    }
+    return elementos[0];
    }
 }

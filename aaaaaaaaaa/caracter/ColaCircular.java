@@ -1,14 +1,13 @@
-package COLAS;
+package aaaaaaaaaa.caracter;
 
 public class ColaCircular {
-    // implementacion cola circular
-	private final int maxcola=10;
-	private int[] elementos;
+    private final int maxcola=10;
+	private char[] elementos;
 	private int frente, ultimo;
 	
 	public ColaCircular()
 	{
-		elementos = new int[maxcola];
+		elementos = new char[maxcola];
 		frente=0;
 		ultimo=0;
 	}
@@ -32,7 +31,7 @@ public class ColaCircular {
 			return ++subind;
 	}
 	
-	public void encolar(int elem)
+	public void encolar(char elem)
 	{		
 		ultimo =siguiente(ultimo);
 		elementos[ultimo]=elem;		
