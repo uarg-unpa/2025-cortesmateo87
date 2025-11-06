@@ -1,9 +1,6 @@
-package aaaaaaaaaa.MAIN;
-
-import java.io.Console;
+package ModParcialSeg.segundo.punto2;
 import java.util.Scanner;
-
-public class MainCola {
+public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Cola c1 = new Cola();
@@ -15,6 +12,7 @@ public class MainCola {
             System.out.println("1 Agregar elemento");
             System.out.println("2 Sacar elemento");
             System.out.println("3 Verificar estado");
+            System.out.println("4 Promedio de los elementos negativos");
             opcion = scan.nextInt();
             scan.nextLine();
 
@@ -45,9 +43,20 @@ public class MainCola {
                 case 3:
                     System.out.println("¿Vacia?" +c1.estaVacia()+ "¿Llena?" +c1.estaLlena());
                     break;
+                case 4:
+                    if(c1.estaVacia()){
+                        System.out.println("Error: La cola se encuentra vacia.");
+                    } else{
+                        if(c1.promNeg() == -1){
+                            System.out.println("No hay numeros negativos");
+                        } else{
+                            System.out.println("El promedio de los numeros negativos es: " +c1.promNeg());
+                        }
+                    }
                 default:
                     System.out.println("Opción no válida. Por favor, elige otra opción.");
             }
-        } while (opcion != 0);
+        } while(opcion != 0);
+    scan.close();
     }
 }
